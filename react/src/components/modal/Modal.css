@@ -1,11 +1,58 @@
 @import "../../style/base.css";
-
-.modal-overlay{
-    padding: 5px;
-    top: 0;
-
+/* 화면 전체를 덮는 반투명 배경 */
+.modal-overlay {
+    position: fixed;
+    inset: 0; /* top, right, bottom, left: 0 */
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 
-.modal-content{
-    padding: 5px;
+/* 모달 본체 */
+.modal-content {
+    position: relative;
+    width: min(600px, 92vw);   /* 600px 이하, 모바일에서는 화면에 맞게 */
+    background: var(--secondary--color-);
+    border-radius: 12px;
+    padding: 24px 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    animation: modal-fade-in 0.25s ease;
+}
+
+/* 열릴 때 살짝 애니메이션 */
+@keyframes modal-fade-in {
+    from {
+        transform: translateY(-12px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* 모달 제목 */
+.modal-title {
+    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text--color);
+}
+
+/* 닫기 버튼 (우측 상단 X) */
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text--color);
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #000;
 }

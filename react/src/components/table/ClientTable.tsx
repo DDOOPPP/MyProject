@@ -4,20 +4,23 @@ import { FaEdit } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 import "./Table.css"
+import ClientAddModal from "../modal/ClientAddModal.tsx";
+import {useState} from "react";
 
 interface ClientTableProps {
     clients: Client[];
     loading: boolean;
+    refetch? : () =>     Promise<void>
 }
 
-export default function  ClientTable({clients , loading}:ClientTableProps){
-
+export default function ClientTable({ clients, loading, refetch }: ClientTableProps) {
+    const [open, setOpen] = useState(false);
 
     return (
         <div className="article">
             <div className="table title">
                 <h4 >등록된 서버 리스트</h4>
-                <button><FaPlus /> 등록</button>
+                <button onClick={() => setOpen(true)}><FaPlus /> 등록</button>
             </div>
             <div>
                 <table className="table-overlay">
@@ -59,6 +62,7 @@ export default function  ClientTable({clients , loading}:ClientTableProps){
                     </tbody>
                 </table>
             </div>
+            <ClientAddModal open={open} onClose={() => setOpen(false)} onCreated={refetch}/>
         </div>
     )
 }

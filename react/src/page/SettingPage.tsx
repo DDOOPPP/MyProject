@@ -3,7 +3,7 @@ import {LoadClients} from "../hook/ClientHook.ts";
 
 
 export default function SettingPage(){
-    const {clients ,loading ,error} = LoadClients();
+    const {clients ,loading ,error,refetch} = LoadClients();
     if (error){
         console.log(error);
     }
@@ -11,7 +11,10 @@ export default function SettingPage(){
     console.log(clients)
     return (
         <div className="content-container">
-            <ClientTable clients={clients} loading={loading}/>
+            <div>
+                <ClientTable clients={clients} loading={loading} refetch={refetch}/>
+            </div>
+
         </div>
     )
 }
