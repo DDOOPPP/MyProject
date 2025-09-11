@@ -23,7 +23,7 @@ export function LoadClients(){
     useEffect(() => {
         refetch();
     }, [refetch]);
-    
+    console.log(clients);
     return {clients,loading,error,refetch}
 }
 

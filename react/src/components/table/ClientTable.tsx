@@ -2,20 +2,26 @@ import type {Client} from "../../types/Client.tsx";
 import { GoBrowser } from "react-icons/go";
 import { FaEdit } from "react-icons/fa";
 import { FaTrash } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import "./Table.css"
 
 interface ClientTableProps {
-    clients: Client[]; // client라는 prop에 Client[] 배열을 받는다
+    clients: Client[];
+    loading: boolean;
 }
 
-export default function  ClientTable({clients}:ClientTableProps){
+export default function  ClientTable({clients , loading}:ClientTableProps){
+
+
     return (
         <div className="article">
-            <h4 className="table title">등록된 서버 리스트</h4>
-
+            <div className="table title">
+                <h4 >등록된 서버 리스트</h4>
+                <button><FaPlus /> 등록</button>
+            </div>
             <div>
                 <table className="table-overlay">
-                    <thead>
+                <thead>
                     <tr>
                         <th>이름</th>
                         <th>HOST</th>
@@ -25,8 +31,13 @@ export default function  ClientTable({clients}:ClientTableProps){
                     </tr>
                     </thead>
                     <tbody>
-                    {Array.isArray(clients) ? (clients.map(client => (
-                            <tr id={client.name}>
+                    {loading ? (
+                        <tr>
+                            <td colSpan={5}>데이터를 불러오는 중...</td>
+                        </tr>
+                    ) : clients.length > 0 ? (
+                        clients.map(client => (
+                            <tr key={client.name}>
                                 <td>{client.name}</td>
                                 <td>{client.host}:{client.port}</td>
                                 <td>{client.path}</td>
@@ -39,11 +50,12 @@ export default function  ClientTable({clients}:ClientTableProps){
                                     </div>
                                 </td>
                             </tr>
-                        ))) :
+                        ))
+                    ) : (
                         <tr>
-                            <td colSpan={5}>데이터를 불러오는 중...</td>
+                            <td colSpan={5}>등록된 서버가 없습니다.</td>
                         </tr>
-                    }
+                    )}
                     </tbody>
                 </table>
             </div>

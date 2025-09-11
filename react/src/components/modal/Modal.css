@@ -1,0 +1,11 @@
+@import "../../style/base.css";
+
+.modal-overlay{
+    padding: 5px;
+    top: 0;
+
+}
+
+.modal-content{
+    padding: 5px;
+}
