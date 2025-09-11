@@ -1,0 +1,36 @@
+@import "../../style/base.css";
+
+.table.title{
+    padding: 0 12px;
+    text-align: left;
+}
+
+.table-overlay{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.table-overlay thead{
+    text-align: left;
+}
+
+.table-overlay th{
+    padding: 8px 12px;
+    border-bottom: var(--border--);
+    font-weight: 600;
+}
+
+.table-overlay tbody tr {
+    transition: background 0.2s ease;
+    border-bottom: var(--border--);
+}
+
+.table-overlay tbody tr:hover {
+    background: var(--border-color);
+}
+
+.table-overlay td {
+    padding: 8px 12px;
+    border-bottom: var(--border--);
+}

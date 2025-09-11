@@ -1,0 +1,65 @@
+:root{
+    --primary--color : #87888C;
+    --secondary--color-: hsl(234, 18%, 11%);
+    --secondary--color--: #21222D;
+    --active--color: #A9DFD8;
+    --text--color: #FFFFFF;
+    --border-color: hsl(0, 0%, 55%);
+
+    --border-- : 1px solid var(--border-color);
+}
+
+.app-layout {
+    display: flex;
+    align-items: stretch; /* 중요: 높이 맞춤 */
+    min-height: 100vh;     /* 전체 페이지 높이 확보 */
+    gap: 1rem;
+    background: var(--primary--color);
+}
+
+.app-content {
+    color: var(--text--color);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 3rem;
+    width: 100vw;
+    border-radius: 15px;
+    background: var(--secondary--color-);
+    margin: 10px;
+}
+
+.content-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: 10px;
+    padding: 2rem;
+}
+
+.article {
+    grid-row: span 20;
+    background: var(--secondary--color--);
+    padding: 15px;
+    border-radius: 15px;
+}
+/* 반응형 padding 조정 */
+@media (max-width: 768px) {
+    .app-content {
+        padding: 16px;
+        margin-left: 0; /* 모바일일 때는 SideNav가 안 보일 수도 있음 */
+    }
+}
+
+@media (max-width: 1280px) {
+    .app-content {
+        padding: 16px;
+        margin-left: 0; /* 모바일일 때는 SideNav가 안 보일 수도 있음 */
+    }
+}
+
+@media (max-width: 768px) {
+    .app-content {
+        padding: 16px;
+        margin-left: 0; /* 모바일일 때는 SideNav가 안 보일 수도 있음 */
+    }
+}
