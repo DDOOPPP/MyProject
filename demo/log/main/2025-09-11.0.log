@@ -1234,3 +1234,23 @@ com.gi.demo.controller.ClientController#getAllClients() mapped.
 2025-09-11 17:11:23.526 [http-nio-8080-exec-5] INFO  c.g.d.c.ClientController - Request Web
 2025-09-11 17:13:46.634 [http-nio-8080-exec-6] INFO  c.g.d.c.ClientController - Request Web
 2025-09-11 17:13:46.648 [http-nio-8080-exec-7] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:40:28.919 [http-nio-8080-exec-10] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:48:06.791 [http-nio-8080-exec-2] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:48:06.807 [http-nio-8080-exec-3] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:52:43.798 [http-nio-8080-exec-5] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:52:43.809 [http-nio-8080-exec-8] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:06.119 [http-nio-8080-exec-6] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:06.148 [http-nio-8080-exec-7] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:07.042 [http-nio-8080-exec-9] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:07.061 [http-nio-8080-exec-10] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:16.745 [http-nio-8080-exec-1] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:16.757 [http-nio-8080-exec-2] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:17.432 [http-nio-8080-exec-3] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:17.440 [http-nio-8080-exec-4] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:18.996 [http-nio-8080-exec-5] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:19.005 [http-nio-8080-exec-8] INFO  c.g.d.c.ClientController - Request Web
+2025-09-11 17:53:49.389 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-11 17:53:49.396 [tomcat-shutdown] INFO  o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete
+2025-09-11 17:53:49.399 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-11 17:53:49.400 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-11 - Shutdown initiated...
+2025-09-11 17:53:49.403 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-11 - Shutdown completed.

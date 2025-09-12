@@ -1,6 +1,6 @@
 import {type ReactNode, useRef} from "react";
 import {useEffect} from "react";
-
+import { FaBackspace } from "react-icons/fa";
 interface ModalProps {
     open: boolean;
     onClose: () => void;
@@ -28,9 +28,16 @@ export default function Modal({ open, onClose, children, title }: ModalProps) {
                 onClick={(e) => e.stopPropagation()}
                 tabIndex={-1}
             >
-                {title && <h3 className="modal-title">{title}</h3>}
-                <button className="modal-close" aria-label="닫기" onClick={onClose}>×</button>
-                {children}
+                <div className="modal-header">
+                    <div aria-hidden="true"/>
+                    {title && <h3 className="modal-title">{title}</h3>}
+                    <button className="modal-close" aria-label="닫기" onClick={onClose}>
+                        <FaBackspace/>
+                    </button>
+                </div>
+                <div className="modal-title">
+                    {children}
+                </div>
             </div>
         </div>
     );

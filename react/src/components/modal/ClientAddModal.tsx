@@ -1,8 +1,9 @@
 import {useEffect, useState} from "react";
-import {useCreate} from "../../hook/ClientHook";
 import type {Client} from "../../types/Client";
 import Modal from "./Modal";
-
+import {useCreate} from "../../hook/ClientHook.ts";
+import "./Modal.css"
+import "./Form.css"
 interface Props{
     open: boolean;
     onClose: () => void;
@@ -54,8 +55,8 @@ export default function ClientAddModal({ open, onClose, onCreated }: Props) {
 
         try{
             await action(form);
-            onCreated?.();   // 부모에서 refetch 등 처리
-            onClose();       // 모달 닫기
+            onCreated?.();
+            onClose();
         }catch (err) {
             console.error(err);
             alert("등록 중 오류가 발생했습니다.");
@@ -91,18 +92,16 @@ export default function ClientAddModal({ open, onClose, onCreated }: Props) {
                 </label>
                 <div className="grid-2">
                     <label>
-                        Min 메모리(GB)
-                        <input name="min_memory" type="number" min={1} value={form.min_memory} onChange={onChange} />
-                    </label>
-                    <label>
-                        Max 메모리(GB)
-                        <input name="max_memory" type="number" min={1} value={form.max_memory} onChange={onChange} />
+                        메모리(GB)
+                        <input name="min_memory" type="number" min={1} value={form.min_memory} onChange={onChange}/>
+                         ~
+                        <input name="max_memory" type="number" min={1} value={form.max_memory} onChange={onChange}/>
                     </label>
                 </div>
 
                 <div className="modal-actions">
+                    <button type="submit">등록</button>
                     <button type="button" onClick={onClose}>취소</button>
-                    <button type="submit" disabled={loading}>{loading ? "등록 중..." : "등록"}</button>
                 </div>
             </form>
         </Modal>
