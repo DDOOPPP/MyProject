@@ -1,4 +1,4 @@
-package org.gi.gICore.model.task;
+package org.gi.gICore.model.stat;
 
 import lombok.Builder;
 import lombok.Data;
