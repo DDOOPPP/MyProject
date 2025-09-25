@@ -2449,3 +2449,11 @@ Consider defining a bean of type 'org.springframework.messaging.simp.SimpMessagi
 2025-09-12 17:02:29.375 [http-nio-8080-exec-5] INFO  c.g.d.c.ClientController - Request Web
 2025-09-12 17:07:59.931 [http-nio-8080-exec-1] INFO  c.g.d.c.ClientController - Request Web
 2025-09-12 17:07:59.956 [http-nio-8080-exec-3] INFO  c.g.d.c.ClientController - Request Web
+2025-09-12 17:09:57.893 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.t.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-12 17:09:57.903 [tomcat-shutdown] INFO  o.s.b.w.e.t.GracefulShutdown - Graceful shutdown complete
+2025-09-12 17:09:57.916 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopping...
+2025-09-12 17:09:57.917 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@9db6cdc]]
+2025-09-12 17:09:57.918 [SpringApplicationShutdownHook] INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Stopped.
+2025-09-12 17:09:57.928 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-12 17:09:57.941 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-09-12 17:09:57.946 [SpringApplicationShutdownHook] INFO  c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
